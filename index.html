@@ -1,25 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Formular Zilnic</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            margin: 20px;
         }
-        h1 {
-            color: #333;
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
         }
     </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <h1>Formular Zilnic</h1>
+    <form>
+        <label for="dispozitia_zilnica">Dispoziția zilnică:</label>
+        <select id="dispozitia_zilnica" name="dispozitia_zilnica">
+            <option value="-5">-5 (depresie extremă)</option>
+            <option value="-4">-4</option>
+            <option value="-3">-3</option>
+            <option value="-2">-2</option>
+            <option value="-1">-1</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (manie maximă)</option>
+        </select>
+
+        <label for="ora_culcare">Ora de culcare:</label>
+        <input type="time" id="ora_culcare" name="ora_culcare" required>
+
+        <label for="ora_trezire">Ora de trezire:</label>
+        <input type="time" id="ora_trezire" name="ora_trezire" required>
+
+        <label for="ore_activitate">Cate ore de activitate profesională sau alte activități ai avut azi?</label>
+        <input type="number" id="ore_activitate" name="ore_activitate" required>
+
+        <label for="persoane_vazute">În medie, cu câte persoane te-ai văzut/auzit azi?</label>
+        <input type="number" id="persoane_vazute" name="persoane_vazute" required>
+
+        <label for="activitate_fizica">Activitate fizică exprimată în ore:</label>
+        <input type="number" id="activitate_fizica" name="activitate_fizica" required>
+
+        <label>Consum de substanțe:</label>
+        <label><input type="checkbox" name="substance" value="alcool"> Alcool</label>
+        <label><input type="checkbox" name="substance" value="cafea"> Cafea</label>
+        <label><input type="checkbox" name="substance" value="tigari"> Tigări</label>
+        <label><input type="checkbox" name="substance" value="altele"> Altele</label>
+
+        <label for="evenimente">Evenimente deosebite (conflicte sau altele):</label>
+        <textarea id="evenimente" name="evenimente" rows="4"></textarea>
+
+        <label for="tratament">Tratament:</label>
+        <textarea id="tratament" name="tratament" rows="4"></textarea>
+
+        <label for="kilograme">Kilograme:</label>
+        <input type="number" id="kilograme" name="kilograme" required>
+
+        <label for="cheltuieli">Cheltuieli mari (RON):</label>
+        <input type="number" id="cheltuieli" name="cheltuieli" required>
+
+        <button type="submit">Trimite</button>
+    </form>
 </body>
 </html>
