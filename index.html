@@ -12,8 +12,9 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
+            align-items: flex-start; /* Align items to the top */
+            height: 100vh; /* Use full height of viewport */
+            overflow-y: auto; /* Enable vertical scrolling */
         }
         .container {
             background-color: #ffffff;
@@ -23,11 +24,14 @@
             width: 90%;
             max-width: 600px;
             padding-right: 30px; /* Added more padding to the right */
+            box-sizing: border-box; /* Ensure padding is included in width */
+            overflow: hidden; /* Prevent overflow */
         }
         h1 {
             text-align: center;
             color: #333;
             margin-bottom: 20px; /* Added margin for spacing */
+            margin-top: 0; /* Ensure no extra margin at the top */
         }
         label {
             display: block;
@@ -42,6 +46,7 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 16px;
+            box-sizing: border-box; /* Ensure padding is included in width */
         }
         button {
             width: 100%;
@@ -71,7 +76,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Med Journal</h1> <!-- Updated title -->
+        <h1>Med Journal</h1> <!-- Title centered -->
         <form>
             <label for="dispozitia_zilnica">Dispoziția zilnică:</label>
             <select id="dispozitia_zilnica" name="dispozitia_zilnica">
